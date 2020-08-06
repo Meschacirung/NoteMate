@@ -1,3 +1,5 @@
+@import '../../../main.scss';
+
 .main-container{
     
     display: flex;
@@ -17,4 +19,40 @@
 app-note-card{
     display: block;
     margin-bottom:20px;
+}
+
+.add-btn{
+    position: fixed;
+    z-index:1000;
+
+    right:15px;
+    bottom:15px;
+
+    height:50px;
+    width:50px;
+
+    color: white;
+
+    font : {
+        size : 24px;
+        weight: 800;
+    }
+
+    border-radius:50px;
+    border: none;
+
+    background: $primary;
+
+    box-shadow: 0 5px 20px $primary;
+
+    &:focus{
+        outline: none;
+    }
+
+    &:hover{
+        cursor: pointer;
+
+        background: darken($primary, 10);
+        box-shadow: 0 8px 25px $primary;
+    }
 }
