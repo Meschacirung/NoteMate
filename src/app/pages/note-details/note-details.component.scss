@@ -5,3 +5,13 @@
 
     padding:1rem;
 }
+
+input, textarea{
+    &.ng-invalid.ng-touched{
+        border-color: red;
+
+        &:focus{
+            box-shadow: 0 0 15px 2px rgba(red, .15);
+        }
+    }
+}
