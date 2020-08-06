@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NoteListComponent } from './pages/note-list/note-list.component';
+import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 
 
 const routes: Routes = [
-  { path :'', component: NoteListComponent}
+  { path :'', component: MainLayoutComponent, children :[
+    { path :'', component : NoteListComponent }
+  ]}
 ];
 
 @NgModule({
