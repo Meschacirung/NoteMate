@@ -12,6 +12,6 @@
     </div>
 
     <div class="notes-list">
-        <app-note-card title = "A Note title here" body="Place a lorem ipsum long text here to complete the content"></app-note-card>
+        <app-note-card *ngFor="let note of notes" [title]="note.title" [body]="note.body"></app-note-card>
     </div>
 </div>
