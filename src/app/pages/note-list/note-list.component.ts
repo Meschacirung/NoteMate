@@ -11,12 +11,16 @@ export class NoteListComponent implements OnInit {
 
   notes : Note[] = new Array<Note>();
 
-  constructor(private noteService : NotesService) { }
+  constructor(private notesService : NotesService) { }
 
   ngOnInit(): void {
 
-    this.notes = this.noteService.getAll(); 
+    this.notes = this.notesService.getAll(); 
 
+  }
+
+  deleteNote(id: number){
+    this.notesService.delete(id);
   }
 
 }
